@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favoritos</title>
+    </head>
+    <script>
+       var navegador = navigator.appName.substr(0,3);
+        var version = navigator.appVersion.substr(0,1);
+        var direccion = window.location;
+        var titulo= window.name;
+        
+        function agregarFvoritos(){
+            var rep = confirm("¿Desea agregar esta pagina a favoritos?");
+            
+            if(rep == false)
+                return;
+            else   
+                if(navegador == "Mic" && version >=8){
+                    var url_sitio= direccion;
+                    var titulo_sitio = titulo;
+                    window.external.AddFavorite(url_sitio,titulo_sitio);
+                }
+                else{
+                    alert("Utilice el atajo de teclado Ctrl + D para agregar este sitio a favoritos");
+                }
+        }
+    </script>
+    
+</html>

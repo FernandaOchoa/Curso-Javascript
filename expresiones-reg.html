@@ -1,0 +1,23 @@
+<!DOCTYPE!>
+<html>
+    <head>
+        <title>Expresiones Regulares</title>
+        <script>
+           var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
+            function testInfo(phoneInput) {
+                var OK = re.exec(phoneInput.value);
+                
+                if(!OK)
+                    window.alert(RegExp.input + "no es un telefono con lada");
+                else 
+                    window.alert("Gracias, tu numero de telefono es "+ OK[0]);
+            }
+        </script>
+    </head>
+    <body>
+        <p>Introduce tu numero de telefono (con lada) y oprime "verificar"</p>
+        <form action="#">
+            <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Verificar</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objeto Window</title>
+    </head>
+    <script>
+        var ventana = window.open("","Nueva", "height=100, width=300, menubar=yes, toolbar = yes, resizable = no, scrollbar = no");
+    </script>
+    <body onUnload="window.ventana.close()">
+        <input type="button" name="submit" value = "Nueva" onclick="ventana.focus()">
+        <input type="button" name= "submit2" value="Ocultar" onclick="ventana.blur()">
+    </body>
+</html>

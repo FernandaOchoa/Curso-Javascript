@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consumidor de Frutas</title>
+        <script src = "Frutas.js"></script>
+        <script>
+            var pera;
+            window.onload = function(){
+                pera = new Frutas ("Pera", "verde", 600);
+                document.getElementById('btnBite').addEventListener('click', bite);
+                
+                function bite(){
+                    document.getElementById('result').innerHTML = "Fruta"+pera.nombre+"</br>"+" peso: "+pera.tomaUna();
+                }
+                
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        <div id="result"></div>
+        <button id="btnBite">Toma una Fruta</button>
+    </body>
+</html>
